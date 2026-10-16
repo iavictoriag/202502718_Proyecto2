@@ -1,0 +1,5 @@
+﻿build/
+dist/
+target/
+.nb-attrs
+nbproject/private/
