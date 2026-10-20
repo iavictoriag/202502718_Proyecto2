@@ -16,13 +16,14 @@ public class ListaSimple {
         this.cabeza = null;
         this.tamanio = 0;
     }
-
+    // leemos la lista 
     public boolean estaVacia() {
         return cabeza == null;
     }
 
     public void insertar(Object dato) {
         NodoSimple nuevo = new NodoSimple(dato);
+        // iniciar el nuevo nodo
         if (estaVacia()) {
             cabeza = nuevo;
         } else {
@@ -32,9 +33,9 @@ public class ListaSimple {
             }
             actual.setSiguiente(nuevo);
         }
-        tamanio++;
+        tamanio++; // mas lista
     }
-
+    // tamaño de la lista
     public int getTamanio() {
         return tamanio;
     }

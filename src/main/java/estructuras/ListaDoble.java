@@ -8,6 +8,44 @@ package estructuras;
  *
  * @author vicky
  */
-public class ListaDoble {
-    
+
+//recorre elementos hacia adelante y hacia atrás
+public class ListaDoble<T> {
+    private NodoDoble<T> inicio;
+    private NodoDoble<T> fin;
+    private int tamanio;
+
+    public ListaDoble() {
+        this.inicio = null;
+        this.fin = null;
+        this.tamanio = 0;
+    }
+
+    public boolean estaVacia() {
+        return inicio == null;
+    }
+
+    // Insertar al final 
+    public void insertar(T dato) {
+        NodoDoble<T> nuevo = new NodoDoble<>(dato);
+        
+        if (estaVacia()) {
+            inicio = nuevo;
+            fin = nuevo;
+        } else {
+            fin.setSiguiente(nuevo); //  apunta al nuevo
+            nuevo.setAnterior(fin);   // apunta hacia atrás al antiguo fin
+            fin = nuevo;              // nuevo nodo al fin 
+        }
+        tamanio++;
+    }
+
+    // enseña desde el inicio hasta el fin
+    public void mostrarAdelante() {
+        NodoDoble<T> actual = inicio;
+        while (actual != null) {
+            System.out.println(actual.getDato());
+            actual = actual.getSiguiente();
+        }
+    }
 }

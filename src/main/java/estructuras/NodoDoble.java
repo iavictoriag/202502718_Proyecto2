@@ -9,10 +9,10 @@ package estructuras;
  * @author vicky
  */
 public class NodoDoble<T> {
-    private T dato;
+    private T dato; //informacion
     private NodoDoble<T> siguiente;
     private NodoDoble<T> anterior;
-
+    
     public NodoDoble(T dato) {
         this.dato = dato;
         this.siguiente = null;
