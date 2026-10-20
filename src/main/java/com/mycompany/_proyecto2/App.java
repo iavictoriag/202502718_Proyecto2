@@ -17,7 +17,7 @@ public class App {
         System.out.println("   REGISTRO DE USUARIO Y VEHÍCULO");
         System.out.println("==========================================");
 
-        // 1. Pedir los datos del usuario por consola
+        // Pedir los datos del usuario
         System.out.print("Ingrese ID del usuario: ");
         String id = scanner.nextLine();
 
@@ -30,13 +30,13 @@ public class App {
         System.out.print("Ingrese teléfono: ");
         String telefono = scanner.nextLine();
 
-        // Crear el objeto Usuario con los datos ingresados
+        // Crear el Usuario con los datos ingresados
         Usuario usuario1 = new Usuario(id, nombre, numeroCasa, telefono);
 
         System.out.println("\n--- Datos del Usuario Registrado ---");
         System.out.println(usuario1.toString());
 
-        // 2. Pedir los datos del vehículo por consola
+        //Pedir los datos del vehículo 
         System.out.println("\n==========================================");
         System.out.println("   INGRESO DE VEHÍCULO DE PRUEBA");
         System.out.println("==========================================");
@@ -56,7 +56,7 @@ public class App {
         System.out.print("Ingrese el tipo de vehículo: ");
         String tipo = scanner.nextLine();
 
-        // Crear el objeto Vehículo con los datos ingresados
+        // Crear el  Vehículo 
         Vehiculo miVehiculo = new Vehiculo(placa, marca, modelo, color, tipo);
 
         System.out.println("\n--- Vehículo Registrado con Éxito ---");
